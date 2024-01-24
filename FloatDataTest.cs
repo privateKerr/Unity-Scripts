@@ -6,12 +6,13 @@ using UnityEngine.Events;
 public class FloatDataTest : ScriptableObject
 {
     public float value;
-    public float minValue;
-    public UnityEvent minValueEvent;
+    
+    public UnityEvent UpdateValueEvent;
     
     public void UpdateValue(float number)
     {
         value += number;
+        UpdateValueEvent.Invoke();
     }
 
     public void ReplaceValue(float number)
@@ -19,11 +20,13 @@ public class FloatDataTest : ScriptableObject
         value = number;
     }
 
-    public void MinValueEvent(float minimum)
+    public void DisplayImage(Image img)
     {
-        minValue = minimum;
-        if (!(value < minValue)) return;
-        minValueEvent.Invoke();
-        value = minValue;
+        img.fillAmount = value;
+    }
+
+    public void DisplayNumber(Text txt)
+    {
+        txt.text = value.ToString();
     }
 }
