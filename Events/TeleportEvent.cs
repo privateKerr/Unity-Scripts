@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class TeleportEvent : MonoBehaviour
 {
     public UnityEvent onTeleport;
-    public Vector3Data destination;
+    public Vector3 destination;
 
     public void Teleport()
     {
