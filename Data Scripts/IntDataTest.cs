@@ -1,7 +1,5 @@
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
 
 [CreateAssetMenu]
 public class IntDataTest : ScriptableObject
