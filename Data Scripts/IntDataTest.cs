@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -5,25 +6,33 @@ using UnityEngine.Events;
 [CreateAssetMenu]
 public class IntDataTest : ScriptableObject
 {
-    public float value;
-    public float minValue;
-    public UnityEvent minValueEvent;
+    public int value;
+
+    public void SetValue(int num)
+    {
+        value = num;
+    }
+
+    public void CompareValue(IntDataTest obj)
+    {
+        if (value >= obj.value)
+        {
+            
+        }
+        else
+        {
+            value = obj.value;
+        }
+    }
     
-    public void UpdateValue(float number)
+    public void UpdateValue(int num)
     {
-        value += number;
+        value += num;
     }
 
-    public void ReplaceValue(float number)
+    public void SetValue(IntDataTest obj)
     {
-        value = number;
+        value = obj.value;
     }
 
-    public void MinValueEvent(float minimum)
-    {
-        minValue = minimum;
-        if (!(value < minValue)) return;
-        minValueEvent.Invoke();
-        value = minValue;
-    }
 }
