@@ -12,7 +12,7 @@ public class MyMonoEventsBehaviour : MonoBehaviour
         awakeEvent.Invoke();
     }
 
-    private void StartGame()
+    private void Start()
     {
         startEvent.Invoke();
     }
