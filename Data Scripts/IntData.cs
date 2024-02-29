@@ -1,8 +1,8 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class IntDataTest : ScriptableObject
+[CreateAssetMenu(menuName = "Single Variable Data/Int Data")]
+public class IntData : ScriptableObject
 {
     public int value;
 
@@ -11,7 +11,7 @@ public class IntDataTest : ScriptableObject
         value = num;
     }
 
-    public void CompareValue(IntDataTest obj)
+    public void CompareValue(IntData obj)
     {
         if (value >= obj.value)
         {
@@ -28,7 +28,7 @@ public class IntDataTest : ScriptableObject
         value += num;
     }
 
-    public void SetValue(IntDataTest obj)
+    public void SetValue(IntData obj)
     {
         value = obj.value;
     }

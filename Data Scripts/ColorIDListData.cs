@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "ID Objects/Color ID List Data")]
 
 public class ColorIDListData : ScriptableObject
 {

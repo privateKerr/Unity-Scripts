@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-[CreateAssetMenu]
-public class FloatDataTest : ScriptableObject
+[CreateAssetMenu(menuName = "Single Variable Data/Float Data")]
+public class FloatData : ScriptableObject
 {
     public float value;
     

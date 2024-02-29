@@ -18,12 +18,12 @@ public class TextLabelBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void UpdateLabel(FloatDataTest obj)
+    public void UpdateLabel(FloatData obj)
     {
         label.text = obj.value.ToString(CultureInfo.InvariantCulture);
     }
 
-    public void UpdateLabel(IntDataTest obj)
+    public void UpdateLabel(IntData obj)
     {
         label.text = obj.value.ToString(CultureInfo.InvariantCulture);
     }

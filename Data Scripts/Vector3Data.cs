@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Vector 3 Data/Vector3 Data")]
 
-public class Vector3DataTest : ScriptableObject
+public class Vector3Data : ScriptableObject
 {
     public Vector3 value;
 
