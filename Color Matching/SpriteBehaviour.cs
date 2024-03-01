@@ -24,6 +24,6 @@ public class SpriteBehaviour : MonoBehaviour
 
     public void ChangeRendererSprite(SpriteData obj)
     {
-        rendererObj.sprite = obj.sprites[0];
+        rendererObj.sprite = obj.sprites[2];
     }
 }
