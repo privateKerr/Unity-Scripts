@@ -4,10 +4,12 @@ using UnityEngine;
 public class SpriteBehaviour : MonoBehaviour
 {
     private SpriteRenderer rendererObj;
+    public SpriteData spriteData;
 
     private void Awake()
     {
         rendererObj = GetComponent<SpriteRenderer>();
+        ChangeRendererSprite(spriteData);
     }
 
     public void ChangeRendererColor(ColorID obj)
@@ -18,5 +20,10 @@ public class SpriteBehaviour : MonoBehaviour
     public void ChangeRendererColor(ColorIDListData obj)
     {
         rendererObj.color = obj.currentColor.value;
+    }
+
+    public void ChangeRendererSprite(SpriteData obj)
+    {
+        rendererObj.sprite = obj.sprites[0];
     }
 }
