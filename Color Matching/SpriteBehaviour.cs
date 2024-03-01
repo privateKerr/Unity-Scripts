@@ -5,6 +5,7 @@ public class SpriteBehaviour : MonoBehaviour
 {
     private SpriteRenderer rendererObj;
     public SpriteData spriteData;
+    public int i;
 
     private void Awake()
     {
@@ -24,6 +25,6 @@ public class SpriteBehaviour : MonoBehaviour
 
     public void ChangeRendererSprite(SpriteData obj)
     {
-        rendererObj.sprite = obj.sprites[2];
+        rendererObj.sprite = obj.sprites[i];
     }
 }
