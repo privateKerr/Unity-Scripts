@@ -5,4 +5,9 @@ using UnityEngine.Events;
 public class StringData : ScriptableObject
 {
     public string value;
+
+    public void SetValue(string input)
+    {
+        value = input;
+    }
 }

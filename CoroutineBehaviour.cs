@@ -19,7 +19,7 @@ public class CoroutineBehaviour : MonoBehaviour
         set => canRun = value;
     }
 
-    private void Start()
+    public void Start()
     {
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
