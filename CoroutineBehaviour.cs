@@ -12,6 +12,7 @@ public class CoroutineBehaviour : MonoBehaviour
     public float seconds = 3.0f;
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
+    private TimeData timeData;
 
     public bool CanRun
     {
@@ -23,6 +24,7 @@ public class CoroutineBehaviour : MonoBehaviour
     {
         wfsObj = new WaitForSeconds(seconds);
         wffuObj = new WaitForFixedUpdate();
+        timeData = ScriptableObject.CreateInstance<TimeData>();
         startEvent.Invoke();
     }
 
@@ -56,7 +58,24 @@ public class CoroutineBehaviour : MonoBehaviour
         while (canRun)
         {
             yield return wfsObj;
+            UpdateTimeData();
             repeatUntilFalseEvent.Invoke();
+        }
+    }
+
+    private void UpdateTimeData()
+    {
+        timeData.seconds++;
+        if (timeData.seconds >= 60)
+        {
+            timeData.seconds = 0;
+            timeData.minutes++;
+        }
+
+        if (timeData.minutes >= 60)
+        {
+            timeData.minutes = 0;
+            timeData.hours++;
         }
     }
 }

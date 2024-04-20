@@ -33,6 +33,13 @@ public class TextLabelBehaviour : MonoBehaviour
         label.text += obj.value.ToString(CultureInfo.InvariantCulture);
     }
     
+    public void UpdateLabel(TimeData obj)
+    {
+            label.text += obj.hours.ToString("00") + ":"; // Two digits for hours
+            label.text += obj.minutes.ToString($"00") + ":"; // Two digits for minutes
+            label.text += obj.seconds.ToString("00"); // Two digits for seconds
+    }
+    
     public void SetLabel(StringData obj)
     {
         label.text = obj.value.ToString(CultureInfo.InvariantCulture);
