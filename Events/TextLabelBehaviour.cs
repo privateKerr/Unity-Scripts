@@ -35,9 +35,7 @@ public class TextLabelBehaviour : MonoBehaviour
     
     public void UpdateLabel(TimeData obj)
     {
-            label.text += obj.hours.ToString("00") + ":"; // Two digits for hours
-            label.text += obj.minutes.ToString($"00") + ":"; // Two digits for minutes
-            label.text += obj.seconds.ToString("00"); // Two digits for seconds
+        label.text = obj.hours.ToString("00") + ":" + obj.minutes.ToString("00") + ":" + obj.seconds.ToString("00");
     }
     
     public void SetLabel(StringData obj)
